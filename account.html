@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/account.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400..900&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style='background:black'><text y='16' font-family='Trebuchet MS' font-weight='900' fill='green'>GZ</text></svg>">
+  <title>Account</title>
+</head>
+
+<body>
+  <header>
+    <div class="nave">
+      <div class="logo">
+        <img src="little/LOGO.svg">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="tournaments.html">Tournaments</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button><a>En</a></button>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h1>Форма реєстрації користувача</h1>
+      <form id="registrationForm" action="submit.php" method="post">
+  
+        <p>
+          <label for="full_name">Повне ім'я:</label>
+          <input type="text" id="full_name" name="full_name" required>
+        </p>
+  
+        <p>
+          <label for="email">Електронна пошта:</label>
+          <input type="email" id="email" name="email" required>
+        </p>
+  
+        <p>
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" required>
+        </p>
+  
+        <p>
+          <label for="confirm_password">Підтвердження пароля:</label>
+          <input type="password" id="confirm_password" name="confirm_password" required>
+        </p>
+  
+        <p>
+          <label for="gender">Стать:</label><br>
+          <input type="radio" id="male" name="gender" value="male" checked>
+          <label for="male">Чоловіча</label><br>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Жіноча</label>
+        </p>
+  
+        <p>
+          <label for="age">Вік:</label>
+          <input type="number" id="age" name="age" required>
+        </p>
+  
+        <p>
+          <input type="checkbox" id="agree_terms" name="agree_terms" required>
+          <label for="agree_terms">Погоджуюсь з умовами конфіденційності</label>
+        </p>
+  
+        <p>
+          <input type="submit" value="Зареєструватися">
+        </p>
+  
+      </form>
+      <p id="errorMessage" style="top: -154px;position: relative;font-size: 21px;text-align: 20px;color: red;color: red; display: none;">Паролі не співпадають!</p>
+    </div>
+    <script>
+      document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm_password").value;
+        const errorMessage = document.getElementById("errorMessage");
+  
+        if (password !== confirmPassword) {
+          errorMessage.style.display = "block";
+          event.preventDefault(); 
+        } else {
+          errorMessage.style.display = "none";
+        }
+      });
+    </script>
+  </section>
+</body>
+
+</html>

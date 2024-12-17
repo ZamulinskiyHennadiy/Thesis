@@ -1,0 +1,279 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, rgb(127 39 116), rgb(0 0 0));
+  content: "";
+  font-family: cursive;
+}
+
+/*header*/
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+ul {
+  display: flex;
+  font-family: "Open+Sans";
+  text-transform: uppercase;
+  list-style: none;
+  gap: 60px;
+
+}
+
+a {
+  color: azure;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+a:hover {
+  color: blueviolet;
+}
+
+.nave {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nave>button {
+  font-size: 12px;
+  color: rgb(245, 244, 241);
+  background-color: rgba(0, 0, 255, 0.123);
+  text-align: center;
+  border-radius: 10px;
+  height: 30px;
+}
+
+/*Home*/
+.Home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.t {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.t>h1 {
+  height: 23px;
+  font-family: monospace;
+  color: white;
+  font-size: 163px;
+}
+
+.t>p {
+  color: white;
+  font-size: 40px;
+}
+
+/*Center*/
+.center {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+
+.center>img {
+  width: 670px;
+}
+
+.text {
+  display: flex;
+  gap: 20px;
+  width: 400px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text2 {
+  color: aliceblue;
+  width: 335px;
+  font-size: 20px;
+}
+
+.text2>h3 {
+  width: 280px;
+  font-size: 39px;
+}
+
+/*soldat*/
+.soldat {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.text3 {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.text3>h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.text3>h3 {
+  color: #850a96;
+  font-size: 44px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+    /* Збільшення тексту на 10% */
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.soldat>p {
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  margin: 0;
+  width: 699px;
+  gap: 20px;
+}
+
+.H {
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.hiro2>img {
+  width: 400px;
+}
+
+.text5>h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.text5>p {
+  color: white;
+  font-size: 23px;
+}
+
+.text4 {
+  width: 60%;
+}
+
+.text4>button {
+  font-size: 12px;
+  color: rgb(245, 244, 241);
+  background-color: rgba(0, 0, 255, 0.123);
+  text-align: left;
+  height: 50px;
+  width: 150px;
+  clip-path: polygon(0% 0%, 100% 0%, 77% 100%, 0% 100%);
+  border: 2px solid black;
+}
+
+.text4>button:hover {
+  color: white;
+}
+
+/*footer*/
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.local {
+  height: 50px;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+footer>p {
+  width: 800px;
+  text-align: center;
+}
+
+.path:hover {
+  fill: #cc00ff;
+  transition-duration: 500ms;
+}
+
+@media (max-width: 770px) {
+  footer>p {
+    width: 400px;
+    text-align: center;
+  }
+
+  ul {
+    font-size: 13px;
+    display: flex;
+    font-family: "Open+Sans";
+    text-transform: uppercase;
+    list-style: none;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 460px) {
+  .new-text-hiro>h1 {
+    font-size: 23px;
+  }
+
+  .logo>img {
+    width: 64px;
+  }
+
+  .nave>button {
+    font-size: 7px;
+    height: 20px;
+  }
+
+  ul {
+    font-size: 10px;
+    gap: 17px;
+  }
+
+  footer>p {
+    font-size: 10px;
+    width: 300px;
+  }
+}
