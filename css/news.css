@@ -155,6 +155,10 @@ footer>p {
 }
 
 @media (max-width: 460px) {
+  footer{
+    padding: 0;
+  }
+  
   .new-text-hiro>h1 {
     font-size: 23px;
   }

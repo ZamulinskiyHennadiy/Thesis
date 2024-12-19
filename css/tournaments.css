@@ -161,17 +161,13 @@ a:hover {
 .Cart>img {
   width: 320px;
   height: 471px;
-  border-radius: 136px;
+  border-radius: 40px;
 }
 
 .slider-btn {
-  /* position: absolute; */
-  /* top: 50%; */
-  /* transform: translateY(-50%); */
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  /* padding: 10px; */
   cursor: pointer;
   font-size: 24px;
   border-radius: 50%;
@@ -324,6 +320,11 @@ footer>p {
   }
 
 @media (max-width: 420px) {
+
+  footer{
+    padding: 0;
+  }
+  
   .slider-track {
   gap: 20px;
   width: 178px;
