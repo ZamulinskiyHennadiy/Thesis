@@ -74,7 +74,7 @@ a:hover {
 
 .content-box {
   width: 80%;
-  background-image: url('/hiro/Iphones.png');
+  background-image: url('../hiro/Iphones.png');
   border-radius: 20px;
 }
 
